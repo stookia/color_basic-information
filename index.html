@@ -7,9 +7,16 @@
 
 <body>
 	<div>
-  		<iframe id="Gfrom" src="https://docs.google.com/forms/d/e/1FAIpQLSef6-H4-qJkW2Yc-qRhe5JX7Ky_a7Nj-gCDZvi9U79sjFe7Ug/viewform?embedded=true" width="100%" height="1500px" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+  		<iframe id="Gfrom" src="https://docs.google.com/forms/d/e/1FAIpQLSef6-H4-qJkW2Yc-qRhe5JX7Ky_a7Nj-gCDZvi9U79sjFe7Ug/viewform?embedded=true&usp=pp_url&entry.513777313=ID" width="100%" height="1500px" frameborder="0" marginheight="0" marginwidth="0"></iframe>
 	</div>
   <script>
+	function editId(){
+		const id = localStorage.getItem('id');
+		const url = document.getElementById('Gfrom')
+		url.src = url.replace('ID',id);
+	}
+	document.addEventListener('DOMContentLoaded',editId());
+	
       let load = 0;
       document.getElementById('Gfrom').onload = function () {
         load++;
@@ -20,3 +27,4 @@
   </script>
 </body>
 </html>
+https://docs.google.com/forms/d/e/1FAIpQLSef6-H4-qJkW2Yc-qRhe5JX7Ky_a7Nj-gCDZvi9U79sjFe7Ug/viewform?usp=pp_url&entry.513777313=ID
