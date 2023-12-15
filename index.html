@@ -13,7 +13,7 @@
 	function editId(){
 		const id = localStorage.getItem('id');
 		const url = document.getElementById('Gfrom')
-		url.src = url.replace('ID',id);
+		url.src = url.src.replace('ID',id);
 	}
 	document.addEventListener('DOMContentLoaded',editId());
 	
